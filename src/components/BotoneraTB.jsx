@@ -48,9 +48,7 @@ render() {
                 <div className={Styles.buttonCont}>
                     <div>
                     <button className={Styles.button} type='button' onMouseDown={()=>institucional.play()}>INSTITUCIONAL</button>
-                    <a href="/tb">
-                        <button className={Styles.buttonS}>STOP...</button>
-                    </a>
+                    
                     </div>
                     <h2 className={Styles.titulo2}>Secciones</h2>
                     <div className={Styles.buttonSecciones}>                                            
@@ -66,12 +64,12 @@ render() {
                     </div>                    
                     
                 </div>
+                <a href="/tb">
+                    <button className={Styles.buttonS}>STOP...</button>
+                </a>
                 <Link to='/'>
                     <button className={Styles.back}>Volver</button>
                 </Link>
-                <div>
-                    <Mail/>
-                </div>                
             </div>
         </>
         )

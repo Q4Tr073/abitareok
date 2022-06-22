@@ -5,6 +5,7 @@ import Styles from './Styles/RDF.module.css';
 import imageRDF from './img/RDF.webp';
 
 import Institucional from '../sonidos/RDF/INSTITUCIONAL.wav';
+import BocinaRegueton from '../sonidos/FX/BOCINA REGUETON.mp3';
 //SECCIONES
 import BREVES from '../sonidos/RDF/BREVES.mp3';
 import DEPORTES from '../sonidos/RDF/DEPORTES.wav';
@@ -18,6 +19,9 @@ import SEPARADOR4 from '../sonidos/RDF/QUEDATE CON NOSOTROS.mp3'
 
 var institucional = new Audio();
 institucional.src = Institucional;
+
+var regueton = new Audio();
+regueton.src = BocinaRegueton;
 
 //SECCIONES
 
@@ -60,9 +64,8 @@ render() {
                 <div className={Styles.buttonCont}>
                     <div>
                     <button className={Styles.button} type='button' onMouseDown={()=>institucional.play()}>INSTITUCIONAL</button>
-                    <a href="/rdf">
-                        <button className={Styles.buttonS}>STOP...</button>
-                    </a>
+                    <button className={Styles.buttonRegue} type='button' onMouseDown={()=>regueton.play()}>BOCINA REGUETON</button>
+                    
                     </div>
                     <h2 className={Styles.titulo2}>Secciones</h2>
                     <div className={Styles.buttonSecciones}>                                            
@@ -80,12 +83,12 @@ render() {
                     </div>                    
                     
                 </div>
+                <a href="/rdf">
+                    <button className={Styles.buttonS}>STOP...</button>
+                </a>
                 <Link to='/'>
                     <button className={Styles.back}>Volver</button>
-                </Link>
-                <div>
-                    <Mail/>
-                </div>
+                </Link>                
             </div>
         </>
         )
