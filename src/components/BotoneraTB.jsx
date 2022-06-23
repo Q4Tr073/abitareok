@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Mail from './Mail';
 import { Link } from 'react-router-dom';
 import Styles from './Styles/TB.module.css';
 import imageTB from './img/tb.png';

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Mail from './Mail';
 import { Link } from 'react-router-dom';
 import Styles from './Styles/RDF.module.css';
 import imageRDF from './img/RDF.webp';
@@ -16,6 +15,8 @@ import SEPARADOR1 from '../sonidos/RDF/NAUFRAGIO DE TU RUTINA.mp3'
 import SEPARADOR2 from '../sonidos/RDF/PARA PARA PARA.mp3'
 import SEPARADOR3 from '../sonidos/RDF/RELAX DE LA PLAYA.mp3'
 import SEPARADOR4 from '../sonidos/RDF/QUEDATE CON NOSOTROS.mp3'
+//EFECTOS
+import BotoneraFX from './BotoneraFX';
 
 var institucional = new Audio();
 institucional.src = Institucional;
@@ -50,7 +51,6 @@ separador3.src = SEPARADOR3;
 
 var separador4 = new Audio();
 separador4.src = SEPARADOR4;
-
 class BotoneraRDF extends Component {
 
 render() {
@@ -81,8 +81,11 @@ render() {
                         <button className={Styles.button} type='button' onMouseDown={()=>separador3.play()}>RELAX DE LA PLAYA</button>
                         <button className={Styles.button} type='button' onMouseDown={()=>separador4.play()}>QUEDATE CON NOSOTROS</button>
                     </div>                    
-                    
                 </div>
+                <a href="/rdf">
+                    <button className={Styles.buttonS}>STOP...</button>
+                </a>
+                <BotoneraFX/>
                 <a href="/rdf">
                     <button className={Styles.buttonS}>STOP...</button>
                 </a>
