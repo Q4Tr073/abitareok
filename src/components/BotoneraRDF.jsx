@@ -4,6 +4,7 @@ import Styles from './Styles/RDF.module.css';
 import imageRDF from './img/RDF.webp';
 
 import Institucional from '../sonidos/RDF/INSTITUCIONAL.wav';
+import Cortina from '../sonidos/RDF/CORTINA.mp3';
 import BocinaRegueton from '../sonidos/FX/BOCINA REGUETON.mp3';
 //SECCIONES
 import BREVES from '../sonidos/RDF/BREVES.mp3';
@@ -20,6 +21,9 @@ import BotoneraFX from './BotoneraFX';
 
 var institucional = new Audio();
 institucional.src = Institucional;
+
+var cortina = new Audio();
+cortina.src = Cortina;
 
 var regueton = new Audio();
 regueton.src = BocinaRegueton;
@@ -64,8 +68,10 @@ render() {
                 <div className={Styles.buttonCont}>
                     <div>
                     <button className={Styles.button} type='button' onMouseDown={()=>institucional.play()}>INSTITUCIONAL</button>
-                    <button className={Styles.buttonRegue} type='button' onMouseDown={()=>regueton.play()}>BOCINA REGUETON</button>
-                    
+                    <button className={Styles.button} type='button' onMouseDown={()=>cortina.play()}>CORTINA</button>
+                    <div className={Styles.contRegue}>
+                        <button className={Styles.buttonRegue} type='button' onMouseDown={()=>regueton.play()}>BOCINA REGUETON</button>
+                    </div>
                     </div>
                     <h2 className={Styles.titulo2}>Secciones</h2>
                     <div className={Styles.buttonSecciones}>                                            

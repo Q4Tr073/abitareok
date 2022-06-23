@@ -26,6 +26,13 @@
     font-family: 'Radio Canada', sans-serif;
 }
 
+.contRegue {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttonCont{
     display: flex;
     align-items: center;
