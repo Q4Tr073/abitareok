@@ -3,14 +3,7 @@ import { Link } from 'react-router-dom';
 import Styles from './Styles/RDF.module.css';
 import imageRDF from './img/RDF.webp';
 
-import Institucional from '../sonidos/RDF/INSTITUCIONAL.wav';
-import Cortina from '../sonidos/RDF/CORTINA.mp3';
 import BocinaRegueton from '../sonidos/FX/BOCINA REGUETON.mp3';
-//SECCIONES
-import BREVES from '../sonidos/RDF/BREVES.mp3';
-import DEPORTES from '../sonidos/RDF/DEPORTES.wav';
-import ESPECTACULOS from '../sonidos/RDF/ESPECTACULOS.mp3';
-import PARANORMAL from '../sonidos/RDF/PARANOMAL.mp3';
 //SEPARADORES
 import SEPARADOR1 from '../sonidos/RDF/NAUFRAGIO DE TU RUTINA.mp3'
 import SEPARADOR2 from '../sonidos/RDF/PARA PARA PARA.mp3'
@@ -19,28 +12,8 @@ import SEPARADOR4 from '../sonidos/RDF/QUEDATE CON NOSOTROS.mp3'
 //EFECTOS
 import BotoneraFX from './BotoneraFX';
 
-var institucional = new Audio();
-institucional.src = Institucional;
-
-var cortina = new Audio();
-cortina.src = Cortina;
-
 var regueton = new Audio();
 regueton.src = BocinaRegueton;
-
-//SECCIONES
-
-var breves = new Audio();
-breves.src = BREVES;
-
-var deportes = new Audio();
-deportes.src = DEPORTES;
-
-var espectaculos = new Audio();
-espectaculos.src = ESPECTACULOS;
-
-var paranormal = new Audio();
-paranormal.src = PARANORMAL;
 
 //SEPARADORES
 
@@ -67,18 +40,9 @@ render() {
                 <h1 className={Styles.titulo}>RIO DE FONDO</h1>
                 <div className={Styles.buttonCont}>
                     <div>
-                    <button className={Styles.button} type='button' onMouseDown={()=>institucional.play()}>INSTITUCIONAL</button>
-                    <button className={Styles.button} type='button' onMouseDown={()=>cortina.play()}>CORTINA</button>
-                    <div className={Styles.contRegue}>
+                        <div className={Styles.contRegue}>
                         <button className={Styles.buttonRegue} type='button' onMouseDown={()=>regueton.play()}>BOCINA REGUETON</button>
                     </div>
-                    </div>
-                    <h2 className={Styles.titulo2}>Secciones</h2>
-                    <div className={Styles.buttonSecciones}>                                            
-                        <button className={Styles.button} type='button' onMouseDown={()=>breves.play()}>BREVES</button>
-                        <button className={Styles.button} type='button' onMouseDown={()=>deportes.play()}>DEPORTES</button>
-                        <button className={Styles.button} type='button' onMouseDown={()=>espectaculos.play()}>ESPECTACULOS</button>
-                        <button className={Styles.button} type='button' onMouseDown={()=>paranormal.play()}>PARANORMAL</button>
                     </div>
                     <h2 className={Styles.titulo2}>Separadores</h2>
                     <div className={Styles.buttonSecciones}>                        

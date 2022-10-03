@@ -3,24 +3,11 @@ import { Link } from 'react-router-dom';
 import Styles from './Styles/TB.module.css';
 import imageTB from './img/tb.png';
 
-import Institucional from '../sonidos/TB/INSTITUCIONAL.wav';
-//SECCIONES
-import Finanzas from '../sonidos/TB/FINANZAS.wav';
-import Nutricion from '../sonidos/TB/NUTRICION.wav';
 //SEPARADORES
 import SEPARADOR1 from '../sonidos/TB/SEPARADOR 1.mp3'
 import SEPARADOR2 from '../sonidos/TB/SEPARADOR 2.wav'
 import SEPARADOR3 from '../sonidos/TB/SEPARADOR 3.wav'
 import SEPARADOR4 from '../sonidos/TB/SEPARADOR 4.wav'
-
-var institucional = new Audio();
-institucional.src = Institucional;
-
-var finanzas = new Audio();
-finanzas.src = Finanzas;
-
-var nutricion = new Audio();
-nutricion.src = Nutricion;
 
 var separador1 = new Audio();
 separador1.src = SEPARADOR1;
@@ -45,15 +32,6 @@ render() {
             <div className={Styles.cont}>
                 <h1 className={Styles.titulo}>TRATATE BIEN</h1>
                 <div className={Styles.buttonCont}>
-                    <div>
-                    <button className={Styles.button} type='button' onMouseDown={()=>institucional.play()}>INSTITUCIONAL</button>
-                    
-                    </div>
-                    <h2 className={Styles.titulo2}>Secciones</h2>
-                    <div className={Styles.buttonSecciones}>                                            
-                        <button className={Styles.button} type='button' onMouseDown={()=>finanzas.play()}>FINANZAS</button>
-                        <button className={Styles.button} type='button' onMouseDown={()=>nutricion.play()}>NUTRICION</button>
-                    </div>
                     <h2 className={Styles.titulo2}>Separadores</h2>
                     <div className={Styles.buttonSecciones}>                        
                         <button className={Styles.button} type='button' onMouseDown={()=>separador1.play()}>SEPARADOR 1 </button>
