@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styles from './Styles/FX.module.css';
 //EFECTOS
+import Miedo from '../sonidos/FX/tengo miedo.mp3';
 import Siga from '../sonidos/FX/siga el baile.ogg';
 import Abucheo from '../sonidos/FX/Abucheo.wav';
 import Acomerla from '../sonidos/FX/Acomerla.mp3';
@@ -23,6 +24,9 @@ import Ovasion from '../sonidos/FX/Ovasion.mp3';
 import Redoble from '../sonidos/FX/Redoble.mp3';
 import TanTanTAN from '../sonidos/FX/TanTanTAAAN.mp3';
 import Tension from '../sonidos/FX/Tension.mp3';
+
+var miedo = new Audio();
+miedo.src = Miedo;
 
 var siga = new Audio();
 siga.src = Siga;
@@ -97,6 +101,7 @@ class BotoneraFX extends Component {
                 <h1 className={Styles.titulo}>EFECTOS</h1>
                 <div>
                     <button className={Styles.button} type='button' onMouseDown={()=>abucheo.play()}>ABUCHEO</button>
+                    <button className={Styles.button} type='button' onMouseDown={()=>miedo.play()}>TENGO MIEDO!</button>
                     <button className={Styles.button} type='button' onMouseDown={()=>siga.play()}>SIGA EL BAILE</button>
                     <button className={Styles.button} type='button' onMouseDown={()=>acomerla.play()}>A COMERLA</button>
                     <button className={Styles.button} type='button' onMouseDown={()=>ametralladora.play()}>AMETRALLADORA</button>
